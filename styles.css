@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --Transparentwhite: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --Verylightgray: hsl(0, 0%, 95%); /* (background, headings, buttons)*/
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+.paragraphs {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--Transparentwhite);
+  font-size: 15px;
+  line-height: 2rem;
+  padding-right: 2rem;
+}
+
+.main__container {
+  background-color: var(--Verylightgray);
+  padding: 2rem 1rem;
+}
+
+.card {
+  margin: 0 auto;
+  background-color: pink;
+  border-radius: 10px;
+  overflow: hidden;
+  width: max-content;
+}
+
+.card__cars {
+  width: 340px;
+  height: 550px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car__img {
+  width: 80px;
+}
+
+.card__cars h2 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--Verylightgray);
+  font-size: 3rem;
+}
+
+.card__cars article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card__sedans {
+  background-color: var(--Brightorange);
+}
+
+.card__suvs {
+  background-color: var(--Darkcyan);
+}
+
+.card__luxury {
+  background-color: var(--Verydarkcyan);
+}
+
+.card__sedans button {
+  color: var(--Brightorange);
+}
+
+.card__suvs button {
+  color: var(--Darkcyan);
+}
+
+.card__luxury button {
+  color: var(--Verydarkcyan);
+}
+
+.card__cars button {
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--Verylightgray);
+  border: 1px solid var(--Verylightgray);
+  border-radius: 1.5rem;
+  padding: 1rem 2.5rem;
+  width: fit-content;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card__cars button:hover {
+  color: var(--Verylightgray);
+  background-color: transparent;
+}
+.card__cars button:active {
+  background-color: rgb(52, 14, 14);
+}
+
+.attribution {
+  text-align: center;
+  padding: 1rem;
+}
+
+.attribution p {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+@media (width >= 1100px) {
+  .main__container {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+
+  .card {
+    display: flex;
+  }
+}
